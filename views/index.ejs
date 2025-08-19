@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title><%= title %></title>
   </head>
   <body>
-    <%= messages[0].text %> <%= messages[0].user %> <%= messages[0].added %>
+    <div class="textContainer">
+      <% messages.map((message) => { %>
+
+      <div>
+        <h4><%= message.user %></h4>
+        <p><%= message.text %></p>
+        <sub><%=message.added%></sub>
+      </div>
+
+      <%})%>
+    </div>
   </body>
 </html>
