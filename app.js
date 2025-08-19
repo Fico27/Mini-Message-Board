@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-
-app.get("/", (req, res) => res.send("Express has been setup!"));
+const indexRouter = require("./routes/indexRouter");
+app.use("/", indexRouter);
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
