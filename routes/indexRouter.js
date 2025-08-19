@@ -19,8 +19,6 @@ const messages = [
   },
 ];
 
-indexRouter.get("/", (req, res) =>
-  res.send("This is the index with all current messages!")
-);
+indexRouter.get("/", (req, res) => res.render("index.ejs", { messages }));
 
 module.exports = indexRouter;
