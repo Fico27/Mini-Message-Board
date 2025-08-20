@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="textContainer">
-      <% messages.map((message) => { %>
+      <% messages.map((message, index) => { %>
 
-      <div>
-        <h4><%= message.user %></h4>
-        <p><%= message.text %></p>
-        <sub><%=message.added%></sub>
-      </div>
-
+      <a href="/message/<%= index %>">
+        <div class="message">
+          <h4><%= message.user %></h4>
+          <!-- <p><%= message.text %></p>
+        <sub><%=message.added%></sub> -->
+        </div>
+      </a>
       <%})%>
     </div>
   </body>
