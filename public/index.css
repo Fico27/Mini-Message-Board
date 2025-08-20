@@ -1,5 +1,6 @@
 .textContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -20,4 +21,32 @@ a {
 
 a .message:hover {
   box-shadow: 2px 2px 5px blue;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.new-btn {
+  border-radius: 20px;
+  padding: 5px 5px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.new-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

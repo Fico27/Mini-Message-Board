@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="textContainer">
-      <% messages.map((message, index) => { %>
+    <header class="header">
+      <h1>Messages</h1>
+      <a href="/new"><button class="new-btn">Post Message</button></a>
+    </header>
+    <section class="main">
 
-      <a href="/message/<%= index %>">
-        <div class="message">
-          <h4><%= message.user %></h4>
-          <!-- <p><%= message.text %></p>
-        <sub><%=message.added%></sub> -->
-        </div>
-      </a>
-      <%})%>
-    </div>
+      <div class="textContainer">
+        <% messages.map((message, index) => { %>
+
+        <a href="/message/<%= index %>">
+          <div class="message">
+            <h2><%= message.user %></h4>
+
+          </div>
+        </a>
+        <%})%>
+      </div>
+    </section>
   </body>
 </html>
