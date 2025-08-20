@@ -17,6 +17,9 @@ body {
   height: 300px;
   border-radius: 5px;
 }
+.message:hover {
+  box-shadow: 2px 2px 5px grey;
+}
 
 button {
   margin-top: 2rem;
