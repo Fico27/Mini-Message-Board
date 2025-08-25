@@ -1,3 +1,5 @@
+//controller
+
 async function getMessage(req, res) {
   const messageId = parseInt(req.params.id);
   res.render("message.ejs", {
