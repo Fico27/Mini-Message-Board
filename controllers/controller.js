@@ -7,12 +7,12 @@ async function getMessage(req, res) {
     const message = await db.getMessageById(messageId);
 
     if (!message) {
-      return res.status(400).send("Message not found!");
+      return res.status(404).send("Message not found!");
     }
 
     res.render("message.ejs", {
       title: "Message Details",
-      message: messages[messageId],
+      message,
     });
   } catch (error) {
     console.error("Error getting message:", error);
@@ -32,7 +32,7 @@ async function getIndex(req, res) {
 
 async function createNewMessagePost(req, res) {
   try {
-    const { message: text, user } = req.body;
+    const { text, user } = req.body;
     await db.insertMessage(text, user);
     res.redirect("/");
   } catch (error) {

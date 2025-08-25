@@ -16,9 +16,9 @@
     <section class="main">
 
       <div class="textContainer">
-        <% messages.map((message, index) => { %>
+        <% messages.forEach(message => { %>
 
-        <a href="/message/<%= index %>">
+        <a href="/message/<%= message.id %>">
           <div class="message">
             <h2><%= message.user %></h4>
 
